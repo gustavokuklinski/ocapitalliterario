@@ -5,7 +5,6 @@ paginate = 16
 
 [params]
   descricao = "A trama minimalista e humana de um mundo gerado por IA."
-  edicao = "Ano I — Nº 1"
   instagram = "https://www.instagram.com/ocapitalliterario/"
   substack = "https://ocapitalliterario.substack.com/"
 

@@ -4,7 +4,7 @@ URL: {{ .Permalink }}
 Published: {{ .Date.Format "2006-01-02" }}
 {{ with .Params.categories }}Categories: {{ delimit . ", " }}{{ end }}
 {{ with .Params.tags }}Tags: {{ delimit . ", " }}{{ end }}
-{{ with .Params.autor }}Author: {{ . }}{{ end }}
+{{ with .Params.author }}Author: {{ . }}{{ end }}
 
 ---
 
@@ -15,4 +15,5 @@ Published: {{ .Date.Format "2006-01-02" }}
 *Detalhes do Produto:*
 Preço: {{ .Params.preco | default "N/A" }}
 Link de Afiliado: {{ .Params.link_afiliado }}
+{{ with .Params.autor }}Author: {{ . }}{{ end }}
 {{ end }}
