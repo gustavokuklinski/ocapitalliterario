@@ -1,0 +1,12 @@
+.netlify/
+/public/
+public/
+./public/
+/resources/_gen/
+.cache/
+*.log
+*.tmp
+*.swp
+*~
+.DS_Store
+Thumbs.db

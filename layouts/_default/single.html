@@ -1,0 +1,29 @@
+{{ define "main" }}
+
+<article class="article">
+    <header class="article__header">
+        <div class="article__meta-top">
+            <span class="post-meta__category">{{ index .Params.categories 0 | default "Artigo" }}</span>
+            <time class="post-meta__date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "02 de janeiro de 2006" }}</time>
+        </div>
+        <h1 class="article__title">{{ .Title }}</h1>
+        {{ if .Params.subtitulo }}
+        <p class="article__subtitle">{{ .Params.subtitulo }}</p>
+        {{ end }}
+        <div class="article__rule"></div>
+    </header>
+
+    <div class="article__body">
+        {{ .Content }}
+    </div>
+
+    <footer class="article__footer">
+        <div class="article__rule"></div>
+        <div class="article__share">
+            <p class="article__share-label">Compartilhe</p>
+            <a href="https://wa.me/?text={{ .Title }}%20{{ .Permalink }}" target="_blank" rel="noopener" class="share-btn">WhatsApp</a>
+        </div>
+    </footer>
+</article>
+
+{{ end }}

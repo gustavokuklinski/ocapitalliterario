@@ -1,0 +1,33 @@
+{{/*
+  Uso:
+  {{< afiliado
+    titulo="Nome do Livro"
+    autor="Autor"
+    preco="R$ 39,90"
+    imagem="/img/livro.jpg"
+    link="https://afiliado.com/link"
+    tag="Escolha do mês"
+  >}}
+    Descrição opcional do produto aqui.
+  {{< /afiliado >}}
+*/}}
+
+<div class="aff-inline">
+    {{ with .Params.imagem }}
+    <div class="aff-inline__image-wrap">
+        <img src="{{ . }}" alt="{{ $.Params.titulo }}" class="aff-inline__image" loading="lazy" />
+        {{ with $.Params.tag }}<span class="aff-inline__tag">{{ . }}</span>{{ end }}
+    </div>
+    {{ end }}
+    <div class="aff-inline__body">
+        <h4 class="aff-inline__title">{{ .Params.titulo }}</h4>
+        {{ with .Params.autor }}<p class="aff-inline__author">por {{ . }}</p>{{ end }}
+        <p class="aff-inline__text">{{ .Inner }}</p>
+        {{ with .Params.preco }}<p class="aff-inline__price">{{ . }}</p>{{ end }}
+        {{ with .Params.link }}
+        <a href="{{ . }}" target="_blank" rel="noopener sponsored" class="aff-inline__btn">
+            Comprar agora →
+        </a>
+        {{ end }}
+    </div>
+</div>

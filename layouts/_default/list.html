@@ -1,0 +1,33 @@
+{{ define "main" }}
+
+<section class="section">
+    <div class="section__header">
+        <h2 class="section__title">{{ .Title }}</h2>
+        <div class="section__rule"></div>
+    </div>
+
+    {{ if eq .Type "loja" }}
+    <div class="shop-grid">
+        {{ range .Paginator.Pages }}
+        {{ partial "affiliate-card.html" . }}
+        {{ end }}
+    </div>
+    {{ else }}
+    <div class="posts-grid">
+        {{ range .Paginator.Pages }}
+        {{ partial "post-card.html" . }}
+        {{ end }}
+    </div>
+    {{ end }}
+
+    <div class="pagination">
+        {{ if .Paginator.HasPrev }}
+        <a href="{{ .Paginator.Prev.URL }}" class="pagination__btn pagination__btn--prev">← Próximo</a>
+        {{ end }}
+        {{ if .Paginator.HasNext }}
+        <a href="{{ .Paginator.Next.URL }}" class="pagination__btn pagination__btn--next">Anterior →</a>
+        {{ end }}
+    </div>
+</section>
+
+{{ end }}

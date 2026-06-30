@@ -1,0 +1,20 @@
+<div class="top-bar">
+    <div class="top-bar__inner">
+        <span class="top-bar__item" id="top-date">Carregando...</span>
+        <span class="top-bar__item top-bar__item--center">
+            <a href="/artigos/">Artigos</a> · <a href="/loja/">Loja</a> · <a href="https://ocapitalliterario.substack.com/subscribe" target="_blank" rel="noopener">Newsletter</a>
+        </span>
+        <span class="top-bar__item top-bar__item--right">Ano <span id="top-year"></span> · © O Capital Literário</span>
+    </div>
+</div>
+
+<header class="masthead">
+    <div class="masthead__inner">
+        <p class="masthead__edition">{{ .Site.Params.edicao }}</p>
+        <a href="/" class="masthead__logo-link">
+            <img src="/img/logo.png" alt="{{ .Site.Title }}" class="masthead__logo" />
+        </a>
+        <p class="masthead__tagline"><i>{{ .Site.Params.descricao }}</i></p>
+    </div>
+    <div class="masthead__bottom-rule"></div>
+</header>

@@ -1,0 +1,15 @@
+<article class="post-card">
+    {{ if .Params.cover }}
+    <a href="{{ .RelPermalink }}" class="post-card__image-link">
+        <img src="{{ .Params.cover }}" alt="{{ .Title }}" class="post-card__image" loading="lazy" />
+    </a>
+    {{ end }}
+    <div class="post-card__body">
+        <div class="post-card__meta">
+            <span class="post-meta__category">{{ .Params.categoria | default "Artigo" }}</span>
+            <time class="post-meta__date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "02.01.2006" }}</time>
+        </div>
+        <h3 class="post-card__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        <p class="post-card__excerpt">{{ .Params.resumo | default .Summary | truncate 140 }}</p>
+    </div>
+</article>

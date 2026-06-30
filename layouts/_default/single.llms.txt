@@ -1,0 +1,18 @@
+# {{ .Title }}
+
+URL: {{ .Permalink }}
+Published: {{ .Date.Format "2006-01-02" }}
+{{ with .Params.categories }}Categories: {{ delimit . ", " }}{{ end }}
+{{ with .Params.tags }}Tags: {{ delimit . ", " }}{{ end }}
+{{ with .Params.autor }}Author: {{ . }}{{ end }}
+
+---
+
+{{ .RawContent }}
+
+{{ if .Params.link_afiliado }}
+---
+*Detalhes do Produto:*
+Preço: {{ .Params.preco | default "N/A" }}
+Link de Afiliado: {{ .Params.link_afiliado }}
+{{ end }}

@@ -1,0 +1,29 @@
+{{ define "main" }}
+<section class="section section--graph">
+    <div class="section__header">
+        <h2 class="section__title">Graph</h2>
+        <p class="section__subtitle">Todas as tags e categorias do site</p>
+        <div class="section__rule"></div>
+    </div>
+
+    <div class="graph-cloud">
+        {{ range $term, $list := $.Site.Taxonomies.tags }}
+        <a href="{{ "/tags/" | relLangURL }}{{ $term | urlize }}/" class="graph-tag" style="--tag-size: {{ math.Sqrt (add (len $list) 1) }};">
+            {{ $term }}
+            <span class="graph-tag__count">{{ len $list }}</span>
+        </a>
+        {{ end }}
+    </div>
+
+    <div class="graph-categories">
+        <h3 class="graph-cat-title">Categorias</h3>
+        <div class="graph-cat-list">
+            {{ range $term, $list := $.Site.Taxonomies.categories }}
+            <a href="{{ "/categories/" | relLangURL }}{{ $term | urlize }}/" class="graph-cat-link">
+                {{ $term }} <span class="graph-cat-count">({{ len $list }})</span>
+            </a>
+            {{ end }}
+        </div>
+    </div>
+</section>
+{{ end }}

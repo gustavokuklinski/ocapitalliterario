@@ -1,0 +1,12 @@
+# O Capital Literário
+> {{ .Site.Params.descricao }}
+
+## Artigos
+{{ range where .Site.RegularPages "Type" "artigos" }}
+- [{{ .Title }}]({{ .Permalink }}): {{ .Params.resumo }}
+{{ end }}
+
+## Loja
+{{ range where .Site.RegularPages "Type" "loja" }}
+- [{{ .Title }} - {{ with .Params.preco }}{{ . }}{{ end }}]({{ .Params.link_afiliado }}) {{ with .Params.autor }}por {{ . }}.{{ end }}
+{{ end }}

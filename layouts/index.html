@@ -1,0 +1,112 @@
+{{ define "main" }}
+
+{{ $posts := where .Site.RegularPages "Type" "artigos" }}
+{{ $featured := first 1 $posts }}
+{{ $col1 := after 1 $posts | first 3 }}
+{{ $col3 := after 4 $posts | first 5 }}
+{{ $bottom := first 4 $posts }}
+
+<!-- ========== JORNAL 3 COLUNAS ========== -->
+<section class="newspaper">
+    <!-- Coluna 1: Últimas 3 -->
+    <div class="newspaper__col newspaper__col--left">
+        <div class="newspaper__col-header">
+            <h3 class="newspaper__col-title">Últimas</h3>
+            <div class="newspaper__col-rule"></div>
+        </div>
+        <div class="newspaper__col-body">
+            {{ range $col1 }}
+            {{ $url := .RelPermalink }}
+            <article class="card-sidebar">
+                {{ with .Params.cover }}
+                <a href="{{ $url }}" class="card-sidebar__thumb">
+                    <img src="{{ . }}" alt="{{ $.Title }}" loading="lazy" />
+                </a>
+                {{ end }}
+                <div class="card-sidebar__content">
+                    <span class="post-meta__category">{{ index .Params.categories 0 | default "Artigo" }}</span>
+                    <h4 class="card-sidebar__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
+                    <time class="post-meta__date">{{ .Date.Format "02.01.2006" }}</time>
+                </div>
+            </article>
+            {{ end }}
+        </div>
+    </div>
+
+    <!-- Coluna 2: Destaque -->
+    <div class="newspaper__col newspaper__col--center">
+        {{ range $featured }}
+        {{ $url := .RelPermalink }}
+        <article class="card-featured">
+            {{ with .Params.cover }}
+            <a href="{{ $url }}" class="card-featured__image-wrap">
+                <img src="{{ . }}" alt="{{ $.Title }}" class="card-featured__image" />
+            </a>
+            {{ end }}
+            <div class="card-featured__body">
+                <span class="post-meta__category post-meta__category--large">{{ index .Params.categories 0 | default "Artigo" }}</span>
+                <h2 class="card-featured__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+                {{ with .Params.subtitulo }}<p class="card-featured__subtitle">{{ . }}</p>{{ end }}
+                <p class="card-featured__excerpt">{{ .Params.resumo | default .Summary | truncate 220 }}</p>
+                <time class="post-meta__date post-meta__date--large">{{ .Date.Format "02 de janeiro de 2006" }}</time>
+            </div>
+        </article>
+        {{ end }}
+    </div>
+
+    <!-- Coluna 3: Mais 6 -->
+    <div class="newspaper__col newspaper__col--right">
+        <div class="newspaper__col-header">
+            <h3 class="newspaper__col-title">Mais</h3>
+            <div class="newspaper__col-rule"></div>
+        </div>
+        <div class="newspaper__col-body">
+            {{ range $col3 }}
+            {{ $url := .RelPermalink }}
+            <article class="card-sidebar">
+                <div class="card-sidebar__content">
+                    <span class="post-meta__category">{{ index .Params.categories 0 | default "Artigo" }}</span>
+                    <h4 class="card-sidebar__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
+                    <time class="post-meta__date">{{ .Date.Format "02.01.2006" }}</time>
+                </div>
+            </article>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+<!-- ========== GRID 4 COLUNAS ========== -->
+{{ if $bottom }}
+<section class="section section--bottom-grid">
+    <div class="posts-grid">
+        {{ range $bottom }}
+        {{ $url := .RelPermalink }}
+        <article class="post-card">
+            {{ with .Params.cover }}
+            <a href="{{ $url }}" class="post-card__image-link">
+                <img src="{{ . }}" alt="{{ $.Title }}" class="post-card__image" loading="lazy" />
+            </a>
+            {{ end }}
+            <div class="post-card__body">
+                <div class="post-card__meta">
+                    <span class="post-meta__category">{{ index .Params.categories 0 | default "Artigo" }}</span>
+                    <time class="post-meta__date">{{ .Date.Format "02.01.2006" }}</time>
+                </div>
+                <h4 class="post-card__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
+            </div>
+        </article>
+        {{ end }}
+    </div>
+</section>
+{{ end }}
+
+<!-- ========== LOJA ========== -->
+<section class="section section--shop">
+    <div class="shop-grid">
+        {{ range where .Site.RegularPages "Type" "loja" | first 4 }}
+        {{ partial "affiliate-card.html" . }}
+        {{ end }}
+    </div>
+</section>
+
+{{ end }}

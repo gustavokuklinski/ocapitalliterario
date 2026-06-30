@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    {{ partial "head.html" . }}
+</head>
+<body>
+
+    {{ partial "header.html" . }}
+    {{ partial "nav.html" . }}
+
+    <main class="main-content">
+        {{ block "main" . }}{{ end }}
+    </main>
+
+    {{ partial "footer.html" . }}
+
+    <script>
+    (function(){
+        // 1. Dark Mode
+        var t = localStorage.getItem('theme');
+        if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+
+        // 2. Data e Ano Romano no Top Bar
+        var d = new Date();
+        var months = ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];
+        var days = ['Domingo','Segunda','Terça','Quarta','Quinta','Sexta','Sábado'];
+        document.getElementById('top-date').textContent = days[d.getDay()] + ', ' + d.getDate() + ' de ' + months[d.getMonth()] + ' de ' + d.getFullYear();
+        
+        function toRoman(num) {
+            var r = ["M","CM","D","CD","C","XC","L","XL","X","IX","V","IV","I"];
+            var a = [1000,900,500,400,100,90,50,40,10,9,5,4,1];
+            var res = '';
+            for (var i = 0; i < a.length; i++) { while (num >= a[i]) { res += r[i]; num -= a[i]; } }
+            return res;
+        }
+        document.getElementById('top-year').textContent = toRoman(d.getFullYear());
+    })();
+</script>
+
+    <script>
+        document.getElementById('theme-toggle').addEventListener('click', function() {
+            var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            var next = isDark ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+        });
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MMVQS7JZKV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-MMVQS7JZKV');
+    </script>
+
+</body>
+</html>
