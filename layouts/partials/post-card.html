@@ -6,7 +6,7 @@
     {{ end }}
     <div class="post-card__body">
         <div class="post-card__meta">
-            <span class="post-meta__category">{{ .Params.categoria | default "Artigo" }}</span>
+            <span class="post-meta__category">{{ index .Params.categories 0 | default "Artigo" }}</span>
             <time class="post-meta__date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "02.01.2006" }}</time>
         </div>
         <h3 class="post-card__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
