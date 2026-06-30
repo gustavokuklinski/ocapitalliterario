@@ -1,7 +1,7 @@
 baseURL = "https://capitalliterario.com.br/"
 languageCode = "pt-br"
 title = "O Capital Literário"
-paginate = 2
+paginate = 16
 
 [params]
   descricao = "A trama minimalista e humana de um mundo gerado por IA."
