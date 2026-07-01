@@ -8,4 +8,3 @@ link_afiliado: "https://link.amazon/B0eWEpQga"
 tag: "e-reader"
 resumo: "Leve e compacto, com tela antirreflexo, trocas de página mais rápidas, luz frontal ajustável e bateria de longa duração"
 ---
-
