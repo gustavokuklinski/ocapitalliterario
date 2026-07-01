@@ -1,6 +1,6 @@
 ---
 title: "Xteink X3"
-date: 2025-07-02
+date: 2025-07-01
 type: "loja"
 autor: "Mercado Livre"
 cover: "/img/xtinkx3.jpg"
