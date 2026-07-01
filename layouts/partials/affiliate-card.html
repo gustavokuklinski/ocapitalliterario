@@ -9,7 +9,6 @@
         <h3 class="aff-card__title">{{ .Title }}</h3>
         {{ if .Params.autor }}<p class="aff-card__author">por {{ .Params.autor }}</p>{{ end }}
         <p class="aff-card__excerpt">{{ .Params.resumo | default .Summary | truncate 120 }}</p>
-        {{ if .Params.preco }}<p class="aff-card__price">{{ .Params.preco }}</p>{{ end }}
         {{ if .Params.link_afiliado }}
         <a href="{{ .Params.link_afiliado }}" target="_blank" rel="noopener sponsored" class="aff-card__btn">
             Ver na loja →
