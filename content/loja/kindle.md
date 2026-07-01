@@ -1,6 +1,6 @@
 ---
 title: "Kindle"
-date: 2025-07-10
+date: 2025-07-03
 type: "loja"
 autor: "Amazon"
 cover: "/img/kindle.jpg"
