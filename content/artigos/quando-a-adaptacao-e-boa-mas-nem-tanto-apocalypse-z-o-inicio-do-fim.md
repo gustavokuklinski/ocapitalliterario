@@ -1,12 +1,17 @@
 ---
-title: "Quando a adaptação é boa, mas nem tanto. Apocalypse Z - O início do fim"
+title: Quando a adaptação é boa, mas nem tanto. Apocalypse Z - O início do fim
 subtitulo: "Sabe aquela velha máxima que todo mundo repete: “Mas o livro é melhor”? Pois é. Eu poderia terminar este texto por aqui, porque essa frase já é autoexplicativa. Obrigado e até a próxima!"
 date: 2026-05-21
-type: "artigos"
-categories: ["Filmes"]
-tags: ["Adaptação", "Zumbis", "Literatura"] 
-cover: "/img/quando-a-adaptacao-e-boa-mas-nem-tanto-apocalypse-z-o-inicio-do-fim.jpg"
+type: artigos
+categories:
+  - Filmes
+tags:
+  - Adaptação
+  - Zumbis
+  - Literatura
+cover: /img/quando-a-adaptacao-e-boa-mas-nem-tanto-apocalypse-z-o-inicio-do-fim.jpg
 resumo: "Brincadeiras à parte, a obra original de Manel Loureiro tem um trunfo incrível: a escolha de narrar a história através de um diário. Esse formato imerge o leitor de cabeça, dando a nítida sensação de que encontramos um registro perdido em um mundo pós-apocalíptico real."
+draft: "false"
 ---
 
 ### O que eu achei

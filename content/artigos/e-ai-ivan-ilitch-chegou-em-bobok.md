@@ -1,12 +1,17 @@
 ---
-title: "E aí Ivan Ilitch, chegou em Bobók?"
-subtitulo: "É o epílogo de uma vida boa com uma ótima ressaca."
+title: E aí Ivan Ilitch, chegou em Bobók?
+subtitulo: É o epílogo de uma vida boa com uma ótima ressaca.
 date: 2026-05-25
-type: "artigos"
-categories: ["Literatura"]
-tags: ["Dostoiévski", "Tolstoi", "Literatura"] 
-cover: "/img/e-ai-ivan-ilitch-chegou-em-bobok.jpg"
+type: artigos
+categories:
+  - Literatura
+tags:
+  - Dostoiévski
+  - Tolstoi
+  - Literatura
+cover: /img/e-ai-ivan-ilitch-chegou-em-bobok.jpg
 resumo: "Aqui, temos duas histórias pequenas dos gigantes russos: Tolstói com A Morte de Ivan Ilitch e Dostoiévski com Bobók."
+draft: "false"
 ---
 
 Aqui, temos duas histórias pequenas dos gigantes russos: Tolstói com A Morte de Ivan Ilitch e Dostoiévski com Bobók. Acho que são leituras complementares; depois de uma breve ressaca acompanhando o agonizante fim da vida de Ivan, nada como esvaziar uma garrafa de vodka em um cemitério e ter visões do que acontece depois.

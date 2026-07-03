@@ -4,7 +4,33 @@
     {{ partial "head.html" . }}
 </head>
 <body>
-
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{ .Title }}",
+  "description": "{{ .Params.resumo }}",
+  "image": "{{ .Params.cover | absURL }}",
+  "author": {
+    "@type": "Person",
+    "name": "Gustavo Kuklinski",
+    "url": "{{ .Site.BaseURL }}sobre/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ .Site.Title }}",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ "/img/logo-icon.png" | absURL }}"
+    }
+  },
+  "datePublished": "{{ .Date.Format "2006-01-02" }}",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ .Permalink }}"
+  }
+}
+</script>
     {{ partial "header.html" . }}
     {{ partial "nav.html" . }}
 

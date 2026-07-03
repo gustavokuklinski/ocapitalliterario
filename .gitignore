@@ -4,6 +4,7 @@ public/
 ./public/
 /resources/_gen/
 .cache/
+content/artigos/.obsidian
 *.log
 *.tmp
 *.swp

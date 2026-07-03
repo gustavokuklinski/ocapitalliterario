@@ -1,12 +1,17 @@
 ---
 title: "De Hiroshima ao Espaço: A Construção do Zumbi Moderno"
-subtitulo: "A leitura visceral sobre a origem dos Zumbis"
+subtitulo: A leitura visceral sobre a origem dos Zumbis
 date: 2026-05-18
-type: "artigos"
-categories: ["Literatura"]
-tags: ["Adaptação", "Zumbis", "Literatura"] 
-cover: "/img/de-hiroshima-ao-espaco-a-construção-do-zumbi-moderno.jpg"
-resumo: "À medida que a leitura avançava, muitas peças começaram a se encaixar na minha cabeça sobre os zumbis — principalmente sobre como esse conceito se transformou no que conhecemos hoje na cultura pop."
+type: artigos
+categories:
+  - Literatura
+tags:
+  - Adaptação
+  - Zumbis
+  - Literatura
+cover: /img/de-hiroshima-ao-espaco-a-construção-do-zumbi-moderno.jpg
+resumo: À medida que a leitura avançava, muitas peças começaram a se encaixar na minha cabeça sobre os zumbis — principalmente sobre como esse conceito se transformou no que conhecemos hoje na cultura pop.
+draft: "false"
 ---
 
 ### Antes do monstro, a bomba.

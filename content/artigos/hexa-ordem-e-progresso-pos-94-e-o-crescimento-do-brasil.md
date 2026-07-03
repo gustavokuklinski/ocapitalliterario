@@ -1,12 +1,17 @@
 ---
 title: "Hexa, Ordem e Progresso: pós-94 e o crescimento do Brasil"
-subtitulo: "A cada vitória um novo crescimento! Avante Brasil!"
+subtitulo: A cada vitória um novo crescimento! Avante Brasil!
 date: 2026-06-13
-type: "artigos"
-categories: ["Copa do mundo"]
-tags: ["Brasil", "Copa do mundo 2026", "Reflexão"] 
-cover: "/img/hexa-ordem-e-progresso-pos-94-e-o-crescimento-do-brasil.jpg"
+type: artigos
+categories:
+  - Opnião
+tags:
+  - Brasil
+  - Reflexão
+  - Copa-do-Mundo-2026
+cover: /img/hexa-ordem-e-progresso-pos-94-e-o-crescimento-do-brasil.jpg
 resumo: ""
+draft: "false"
 ---
 
 A Copa do Mundo sempre foi o momento de alegria e união da nação; afinal, o Brasil é o único país com cinco estrelas: três Jules Rimet e duas Taças. O tempo está passando e, talvez em breve, possamos perder o pódio que nos torna tão conhecidos no mundo. Assim como Neil Armstrong (o primeiro homem a pisar na Lua), Pelé também será uma personalidade reconhecida até o século XXII.

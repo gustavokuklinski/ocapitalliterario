@@ -1,12 +1,17 @@
 ---
-title: "Colonizados pela FAANG, escravizados pela MANGOS"
+title: Colonizados pela FAANG, escravizados pela MANGOS
 subtitulo: "Na minha época, quando se via alguma revista ou foto online, alguém ao fundo dizia: “Tudo photoshop”."
 date: 2026-06-27
-type: "artigos"
-categories: ["Pensamento"]
-tags: ["Inteligência Artificial", "Tecnologia", "Reflexão"] 
-cover: "/img/colonizados-pela-faang-escravizados-pela-mangos.png"
+type: artigos
+categories:
+  - Opnião
+tags:
+  - Tecnologia
+  - Reflexão
+  - Inteligencia-Artificial
+cover: /img/colonizados-pela-faang-escravizados-pela-mangos.png
 resumo: "A cada dia que se passa a conexão humano e máquina se torna cada vez mais forte, não sabemos até que ponto, mas atualmente ao vermos qualquer coisa online, logo vem: “Isso aí é AI”."
+draft: "false"
 ---
 
 A cada dia que se passa a conexão humano e máquina se torna cada vez mais forte, não sabemos até que ponto, mas atualmente ao vermos qualquer coisa online, logo vem: “Isso aí é AI”.
