@@ -6,9 +6,10 @@ type: artigos
 categories:
   - Opnião
 tags:
-  - Brasil
+  - Inteligencia-Artificial
+  - IA
+  - LLM
   - Reflexão
-  - Copa-do-Mundo-2026
 cover: /img/a-nova-guerra-fria-dos-eua-com-a-china.jpg
 resumo: O novo objetivo não é uma corrida espacial, nem bélica mas uma corrida por informação.
 draft: "false"

@@ -9,6 +9,8 @@ tags:
   - Tecnologia
   - Reflexão
   - Inteligencia-Artificial
+  - IA
+  - LLM
 cover: /img/colonizados-pela-faang-escravizados-pela-mangos.png
 resumo: "A cada dia que se passa a conexão humano e máquina se torna cada vez mais forte, não sabemos até que ponto, mas atualmente ao vermos qualquer coisa online, logo vem: “Isso aí é AI”."
 draft: "false"

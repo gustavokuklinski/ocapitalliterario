@@ -1,5 +1,14 @@
 {{ define "main" }}
 
+{{ if not .Paginator.Pages }}
+<article class="article">
+    <div class="article__body">
+        {{ .Content }}
+    </div>
+</article>
+
+{{ else }}
+
 <section class="section">
 
     {{ if eq .Type "loja" }}
@@ -26,4 +35,5 @@
     </div>
 </section>
 
+{{ end }}
 {{ end }}

@@ -24,9 +24,9 @@
                 </a>
                 {{ end }}
                 <div class="card-sidebar__content">
-                    <span class="post-meta__category">{{ index .Params.categories 0 | default "Artigo" }}</span>
+                    <span class="post-meta__category">{{ index .Params.categories 0 }}</span>
                     <h4 class="card-sidebar__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
-                    <time class="post-meta__date">{{ .Date.Format "02.01.2006" }}</time>
+                    <time class="post-meta__date">{{ .Date.Format "02/01/2006" }}</time>
                 </div>
             </article>
             {{ end }}
@@ -44,11 +44,11 @@
             </a>
             {{ end }}
             <div class="card-featured__body">
-                <span class="post-meta__category post-meta__category--large">{{ index .Params.categories 0 | default "Artigo" }}</span>
+                <span class="post-meta__category post-meta__category--large">{{ index .Params.categories 0 }}</span>
                 <h2 class="card-featured__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
                 {{ with .Params.subtitulo }}<p class="card-featured__subtitle">{{ . }}</p>{{ end }}
                 <p class="card-featured__excerpt">{{ .Params.resumo | default .Summary | truncate 220 }}</p>
-                <time class="post-meta__date post-meta__date--large">{{ .Date.Format "02 de janeiro de 2006" }}</time>
+                <time class="post-meta__date post-meta__date--large">{{ .Date.Format "02/01/2006" }}</time>
             </div>
         </article>
         {{ end }}
@@ -65,9 +65,9 @@
             {{ $url := .RelPermalink }}
             <article class="card-sidebar">
                 <div class="card-sidebar__content">
-                    <span class="post-meta__category">{{ index .Params.categories 0 | default "Artigo" }}</span>
+                    <span class="post-meta__category">{{ index .Params.categories 0 }}</span>
                     <h4 class="card-sidebar__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
-                    <time class="post-meta__date">{{ .Date.Format "02.01.2006" }}</time>
+                    <time class="post-meta__date">{{ .Date.Format "02/01/2006" }}</time>
                 </div>
             </article>
             {{ end }}
@@ -89,8 +89,8 @@
             {{ end }}
             <div class="post-card__body">
                 <div class="post-card__meta">
-                    <span class="post-meta__category">{{ index .Params.categories 0 | default "Artigo" }}</span>
-                    <time class="post-meta__date">{{ .Date.Format "02.01.2006" }}</time>
+                    <span class="post-meta__category">{{ index .Params.categories 0 }}</span>
+                    <time class="post-meta__date">{{ .Date.Format "02/01/2006" }}</time>
                 </div>
                 <h4 class="post-card__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
             </div>
