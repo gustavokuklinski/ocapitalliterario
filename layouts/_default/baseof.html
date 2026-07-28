@@ -65,12 +65,55 @@
     })();
 </script>
 
-    <script>
+      <script>
+        // 1. Dark Mode
         document.getElementById('theme-toggle').addEventListener('click', function() {
             var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
             var next = isDark ? 'light' : 'dark';
             document.documentElement.setAttribute('data-theme', next);
             localStorage.setItem('theme', next);
+        });
+
+        // 2. Hamburger Menu Mobile (Overlay)
+        const menuToggle = document.getElementById('menu-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        
+        // Cria o fundo escuro do overlay dinamicamente se não existir
+        let navOverlay = document.querySelector('.nav-overlay');
+        if (!navOverlay) {
+            navOverlay = document.createElement('div');
+            navOverlay.classList.add('nav-overlay');
+            document.body.appendChild(navOverlay);
+        }
+
+        function openMenu() {
+            menuToggle.classList.add('is-active');
+            navMenu.classList.add('is-open');
+            navOverlay.classList.add('is-open');
+            document.body.style.overflow = 'hidden'; /* Trava o scroll da página */
+        }
+
+        function closeMenu() {
+            menuToggle.classList.remove('is-active');
+            navMenu.classList.remove('is-open');
+            navOverlay.classList.remove('is-open');
+            document.body.style.overflow = ''; // Destrava o scroll da página
+        }
+
+        menuToggle.addEventListener('click', function() {
+            if (navMenu.classList.contains('is-open')) {
+                closeMenu();
+            } else {
+                openMenu();
+            }
+        });
+
+        // Fechar ao clicar no fundo escuro
+        navOverlay.addEventListener('click', closeMenu);
+
+        // Fechar ao clicar em um link
+        document.querySelectorAll('#nav-menu .nav-bar__link').forEach(function(link) {
+            link.addEventListener('click', closeMenu);
         });
     </script>
 

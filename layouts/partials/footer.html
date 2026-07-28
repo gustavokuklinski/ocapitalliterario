@@ -1,12 +1,13 @@
 <footer class="footer">
-    <div class="footer__rule"></div>
     <div class="footer__inner">
         <div class="footer__brand">
             <img src="/img/logo-icon.png" alt="{{ .Site.Title }}" class="footer__logo" />
-            <p class="footer__name">{{ .Site.Title }}</p>
         </div>
         <p class="footer__disclaimer">
             Links de afiliados estão presentes neste site.<br />Ao comprar por eles, você apoia o projeto sem pagar nada a mais.
+        </p>
+        <p class="footer__disclaimer">    
+            <a href="{{ .Site.Params.substack }}" target="_blank" rel="noopener">Substack</a> | <a href="{{ .Site.Params.instagram }}" target="_blank" rel="noopener">Instagram</a>
         </p>
         <p class="footer__copy">&copy; {{ now.Year }} {{ .Site.Title }}. Todos os direitos reservados.</p>
     </div>
