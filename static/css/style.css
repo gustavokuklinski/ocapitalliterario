@@ -997,6 +997,7 @@ ul { list-style: none; }
     width: clamp(2rem, 2vw, 3rem);
     margin: 0 auto var(--sp-sm);
     transition: filter 0.3s ease;
+    filter: invert(1);
 }
 
 .footer__name {
